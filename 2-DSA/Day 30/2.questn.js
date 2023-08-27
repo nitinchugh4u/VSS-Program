@@ -1,4 +1,5 @@
- const validParanthesis = (input) => {
+let input ="[](){}"
+const validParanthesis = (input) => {
     const splittedArr = input.split("");
   
     const [firstElem] = splittedArr;
@@ -45,6 +46,8 @@
     return stackArr.length === 0;
   };
 
+  console.log(validParanthesis(input))
+
 
 
 
@@ -83,7 +86,7 @@
       const currentElem = splittedArr[i]; // ")"
       const recentlyPushedStackElem = stackArr[stackArr.length - 1]; // ]
   
-      if (pairsMapping[recentlyPushedStackElem] === currentElem) {
+      if (pairsMapping[recentlyPushed76StackElem] === currentElem) {
         stackArr.pop();
         continue;
       }
@@ -93,7 +96,7 @@
     return stackArr.length === 0;
   };
   
-  console.log(validParanthesisV2("([]])"));
+  // console.log(validParanthesisV2("([]])"));
 
 
 

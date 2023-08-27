@@ -10,6 +10,7 @@
 
 // let str =  "[]({}())"  ; //true case 
  str ="[]";
+ str = "[](){}"
 
 
 function find (str){

@@ -6,7 +6,7 @@ v // algo
 // 5.But if the stack is not empty then we have to pop from the stack and compare it with the current loop element if they are opposite then we have to move forward but if not equal then we have to return false.
 // 6.After traversing the whole loop we  have to check the length of an array if it is 0 then we have to return true if not zero then we have to return  false. 
 // []{}()
-
+// let str ="[](){}";
 function find(str) {
     console.log(str);
 
@@ -46,5 +46,5 @@ function find(str) {
     }
 }
 
-let res = find("[]");
+let res = find(str);
 console.log(res);
