@@ -1,24 +1,30 @@
-// function find (n){
-//     let ans = "1";
-//     for(let i=1;i<=n; i++){
-//         if(n==1){
-//             return n;
-//         }
-        
-        
+ function ans(n){
+    
+    if(n==1){
+        return n;
+    }
+    let send;
+    let final;
+    // let send = "" + (n-1);
 
-        
+for(let i=1; i<n; i++){
+    if(i==1){
+    send = ""+i;
+    }
+   let final = countAndSay(send);
+   send = final;
+}
+return send;
+}
 
-//     }
+console.log(ans("11"));
 
-// }
-// console.log(find("2"))
 
 
 function countAndSay(str){
-    if(str==="1"){
-        return str;
-    }
+    // if(str==="1"){
+        // return str;
+    // }
     let arr = str.split("");
     console.log(arr);
     let count =1;
@@ -26,7 +32,8 @@ function countAndSay(str){
     let res2="";;
     for(let i =0; i<arr.length; i++){
         if(arr[i]==arr[i+1]){
-            count = count+1;
+            count = count+1;         
+            
             res =  count ;
              
         }else{
@@ -43,7 +50,9 @@ function countAndSay(str){
             res1 = res;
             // res = 0;
             res2 = res2 +res1+arr[i];
+            // res2 = res2 +count+arr[i];
             console.log("hey",res2,i);
+            res=1;
             // res =0;
             // if(i==arr.length-1){
                 // res =1;
@@ -57,4 +66,5 @@ function countAndSay(str){
 
 }
 
-console.log(countAndSay("1113213211"));
+// console.log(countAndSay("2")); //  3113112221232112111312211312113211 
+// console.log(countAndSay("222221"))   //314211102
