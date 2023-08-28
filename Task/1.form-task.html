@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #form{
+            /* padding: 50px; */
+            
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: lightsalmon;
+
+        }
+    </style>
+</head>
+<body>
+    <form id="form" action="">
+        <label for="fname">First Name   </label>
+        <input id="inputFirst" type="text" placeholder="First Name">
+        <label for="Mname">Middle Name </label>
+        <input type="text" placeholder="Middle Name">
+        <label for="fname">Last name</label>
+        <input type="text" placeholder="Last Name">
+         <label for="email">Email </label>
+        <input type="email" placeholder="Email">
+        <label for="password">Password </label>
+        <input type="password" placeholder="Password">
+        <label for="password">Confirm Password </label>
+        <input type="password" placeholder="Confirm Password">
+        <label for="DOB">DOB </label>
+        <input type="datetime-local" placeholder="DOB">
+        <label for="name">Github Profile Link </label>
+        <input type="text" placeholder="Github Profile Link">
+       <label for="name">Linkedin Profile Link </label>
+        <input type="text" placeholder="LinkedIn Profile Link">
+        <button>Submit</button>
+    
+    </form>
+
+    
+</body>
+</html>
+
+
+<script>
+
+ const inputFirstName = document.getElementById("inputFirst");
+ console.log(inputFirstName);
+//  console.log(inputFirstName.value);
+ 
+ inputFirstName.addEventListener("input", find)
+ function find(e){
+   console.log(e.target.value);
+   const userInput = e.target.value;
+   if(typeof userInput!=="string"){
+    alert("error")
+
+ console.log(inputFirstName.value);
+ let userEnter = inputFirstName.value;
+ 
+ for (let i = 0; i < userEnter.length; i++) {
+      if (!/[A-Za-z]/.test(userEnter[i])) {
+        alert("Not valid ");
+      }
+    }
+//  console.log("hey",inputFirstName.innerText)
+ if(typeof userEnter!=="string"){
+    alert("error")
+ }
+//  if( userEnter>10){
+    // alert ("error");
+//  }
+
+
+    for (let i = 0; i < userEnter.length; i++) {
+      if (!/[A-Za-z]/.test(userEnter[i])) {
+        alert("Not valid ");
+      }
+    }
+//  console.log("hey",inputFirstName.innerText)
+
+
+
+</script>
