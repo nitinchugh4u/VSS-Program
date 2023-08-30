@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        /* background-color: red; */
+        height: 546px;
+        display: grid;
+        grid-template-rows: repeat(9, 47px);
+        gap: 15px;
+        width: 341px;
+      }
+      .box {
+        /* background-color: blue; */
+        border: 1px solid black;
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+      }
+
+      input {
+        height: 20px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="item1">
+        Name
+        <input type="search" id="search-name" placeholder="Enter Your Name" />
+      </div>
+      <div class="box" id="item2">
+        Middle Name
+        <input
+          type="search"
+          id="search-midname"
+          placeholder="Enter your middle Name"
+        />
+      </div>
+
+      <div class="box" id="item3">
+        LastName
+        <input
+          type="search"
+          id="search-lastname"
+          placeholder="Enter your LastName"
+        />
+      </div>
+      <div class="box" id="item4">
+        Email
+        <input type="email" placeholder="Enter your mail" />
+      </div>
+      <div class="box" id="item5">
+        Password
+        <input type="password" placeholder="Enter password" />
+      </div>
+      <div class="box" id="item6">
+        Confirm Password
+        <input type="password" placeholder="Enter Confirm Password" />
+      </div>
+      <div class="box" id="item7">
+        DOB
+        <input type="date" />
+      </div>
+      <div class="box" id="item8">
+        Git-hub
+        <input type="url" />
+      </div>
+      <div class="box" id="item9">
+        Linkdin
+        <input type="url" />
+      </div>
+    </div>
+    <button>Submit</button>
+  </body>
+</html>
+<script>
+  let forname = document.getElementById("search-name");
+  forname.addEventListener("input", () => {
+    let store = forname.value;
+    // console.log(store);
+    for (let i = 0; i < store.length; i++) {
+      if (!/[A-Za-z]/.test(store[i])) {
+        alert("Not valid data");
+      }
+    }
+  });
+
+  let formidname = document.getElementById("search-midname");
+  formidname.addEventListener("input", () => {
+    let store = formidname.value;
+    // console.log({ store });
+
+    for (let i = 0; i < store.length; i++) {
+      if (!/[A-Za-z]/.test(store[i])) {
+        alert("Not valid data");
+      }
+    }
+  });
+
+  let forlastname = document.getElementById("search-lastname");
+  forlastname.addEventListener("input", () => {
+    let store = forlastname.value;
+    // console.log({ store });
+
+    for (let i = 0; i < store.length; i++) {
+      if (!/[A-Za-z]/.test(store[i])) {
+        alert("Not valid data");
+      }
+    }
+  });
+</script>

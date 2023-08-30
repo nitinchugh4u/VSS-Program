@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #form{
+            /* padding: 50px; */
+            
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: lightsalmon;
+
+        }
+
+
+        #para{
+            color: red;
+            display: none;
+        }
+
+        #para1{
+            color: red;
+            display: none;
+        }
+
+
+        #para2{
+            color: red;
+            display: none;
+        }
+
+
+        #paraPassword{
+            color: red;
+            display: none;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+    <form id="form" action="">
+
+
+        <label for="fname">First Name   </label>
+
+        <input id="FirstNameInputBox" type="text" placeholder="First Name">
+
+        <p id="para">  Error </p>
+
+
+
+        <label for="fname">Middle Name   </label>
+
+        <input id="SecondNameInputBox" type="text" placeholder="First Name">
+
+        <p id="para1">  Error </p>
+        
+        
+        
+        
+        <label for="fname">Third Name   </label>
+
+        <input id="ThirdNameInputBox" type="text" placeholder="First Name">
+
+        <p id="para2">  Error </p>
+
+
+
+
+       
+        
+         
+        <label for="email">Email </label>
+        <input type="email" placeholder="Email">
+
+        <label for="password">Password </label>
+        <input id="password" type="password" placeholder="Password">
+        <p id="paraPassword">  Error </p>
+
+
+        <label for="password">Confirm Password </label>
+        <input type="password" placeholder="Confirm Password">
+
+        <label for="DOB">DOB </label>
+        <input type="datetime-local" placeholder="DOB">
+        <label for="name">Github Profile Link </label>
+        <input type="text" placeholder="Github Profile Link">
+       <label for="name">Linkedin Profile Link </label>
+        <input type="text" placeholder="LinkedIn Profile Link">
+
+
+        <button id="button">Submit</button>
+    
+    </form>
+
+    
+    
+</body>
+</html>
+
+
+<script>
+
+    let passwordCopy;
+
+const FirstNameInputBox =  document.getElementById("FirstNameInputBox");
+console.log(FirstNameInputBox);
+
+const SecondNameInputBox =  document.getElementById("SecondNameInputBox");
+console.log(SecondNameInputBox);
+
+const ThirdNameInputBox =  document.getElementById("ThirdNameInputBox");
+console.log(SecondNameInputBox);
+
+
+const password = document.getElementById("password");
+console.log(password);
+
+
+
+const button = document.getElementById("button");
+console.log(button);
+
+
+const para = document.getElementById("para")
+const para1 = document.getElementById("para1")
+const para2 = document.getElementById("para2")
+const paraPassword = document.getElementById("paraPassword");
+console.log(paraPassword);
+
+
+
+FirstNameInputBox.addEventListener("input", findFirstNameInput)
+function findFirstNameInput(){
+
+    let userTypeFirstInput = FirstNameInputBox.value;
+    // console.log("userTypeFirstInput",userTypeFirstInput);
+
+    // let arr = userTypeFirstInput.split("");
+    // console.log("arr",arr);
+
+    for(let i =0; i<userTypeFirstInput.length; i++){
+        const compare = userTypeFirstInput.charCodeAt(i);
+        console.log(compare);
+
+    if((userTypeFirstInput.length<=0)|| (compare>=65 && compare<=90)  ||  (compare>=97 && compare<=122  ) ){
+
+        para.style.display = "none"
+
+
+    }else{
+        para.style.display = "block"
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+SecondNameInputBox.addEventListener("input", findSecondNameInput)
+function findSecondNameInput(){
+
+    let userTypeFirstInput = SecondNameInputBox.value;
+    // console.log("userTypeFirstInput",userTypeFirstInput);
+
+    // let arr = userTypeFirstInput.split("");
+    // console.log("arr",arr);
+
+    for(let i =0; i<userTypeFirstInput.length; i++){
+        const compare = userTypeFirstInput.charCodeAt(i);
+        console.log(compare);
+
+    if((compare>=65 && compare<=90)  ||  (compare>=97 && compare<=122 )){
+        para1.style.display = "none"
+
+
+    }else{
+        para1.style.display = "block"
+
+    }
+}
+}
+
+
+
+
+
+
+ThirdNameInputBox.addEventListener("input", findThirdNameInput)
+function findThirdNameInput(){
+
+    let userTypeFirstInput = ThirdNameInputBox.value;
+    // console.log("userTypeFirstInput",userTypeFirstInput);
+
+    // let arr = userTypeFirstInput.split("");
+    // console.log("arr",arr);
+
+    for(let i =0; i<userTypeFirstInput.length; i++){
+        const compare = userTypeFirstInput.charCodeAt(i);
+        console.log(compare);
+
+    if((compare>=65 && compare<=90)  ||  (compare>=97 && compare<=122 )){
+        para2.style.display = "none"
+
+
+    }else{
+        para2.style.display = "block"
+
+    }
+}
+
+
+}
+
+
+
+
+password.addEventListener("input",findPassword)
+function findPassword(){
+
+    
+    passwordCopy = password.value;
+    console.log(passwordCopy);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+ button.addEventListener("click",findButton)
+
+function findButton(){
+
+    console.log("heyyyyyyy",passwordCopy);
+
+    let specialCharacter = false;
+    let number = false;
+    
+
+for(let i =0; i<passwordCopy.length; i++){
+
+    // Nitin@@@A123
+
+    const compare = passwordCopy.charCodeAt(i);
+    console.log(compare);
+
+    if((compare>=33 && compare<=47)  ||  (compare>=58 && compare<=122 )  ||  (compare>=91 && compare<=96 ) ||    (compare>=123 && compare<=126 )){
+
+        specialCharacter = true;
+    }
+    if(!isNaN(passwordCopy[i]/2)){
+        number = true;
+
+    }
+
+
+}
+
+if(specialCharacter==true && number== true){
+    paraPassword.style.display = "none"
+
+}else{
+    paraPassword.style.display = "block"
+
+}
+ 
+}
+
+</script>
+
+
+    
+

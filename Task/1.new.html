@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #form{
+            /* padding: 50px; */
+            
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: lightsalmon;
+
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+    <form id="form" action="">
+
+        <label for="fname">First Name   </label>
+
+        <input id="FirstNameInputBox" type="text" placeholder="First Name">
+
+
+
+
+
+
+
+
+
+        <label for="Mname">Middle Name </label>
+        <input  type="text" placeholder="Middle Name">
+        <label for="fname">Last name</label>
+        <input  type="text" placeholder="Last Name">
+         
+        <label for="email">Email </label>
+        <input type="email" placeholder="Email">
+
+        <label for="password">Password </label>
+        <input  type="password" placeholder="Password">
+
+        <label for="password">Confirm Password </label>
+        <input type="password" placeholder="Confirm Password">
+
+        <label for="DOB">DOB </label>
+        <input type="datetime-local" placeholder="DOB">
+        <label for="name">Github Profile Link </label>
+        <input type="text" placeholder="Github Profile Link">
+       <label for="name">Linkedin Profile Link </label>
+        <input type="text" placeholder="LinkedIn Profile Link">
+        <button>Submit</button>
+    
+    </form>
+
+    
+    
+</body>
+</html>
+
+
+<script>
+
+const FirstNameInputBox =  document.getElementById("FirstNameInputBox");
+console.log(FirstNameInputBox);
+
+FirstNameInputBox.addEventListener("input", findFirstNameInput)
+function findFirstNameInput(){
+
+    let userTypeFirstInput = FirstNameInputBox.value;
+    // console.log("userTypeFirstInput",userTypeFirstInput);
+
+    let arr = userTypeFirstInput.split("");
+    console.log("arr",arr);
+
+    for(let i =0; i<arr.length; i++){
+        const compare = arr.charCodeAt(i);
+        console.log(compare);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</script>

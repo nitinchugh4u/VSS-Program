@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #para{
+            color: red;
+            /* visibility: hidden; */
+            display: none;
+        }
+
+
+        #paras{
+            color: red;
+            /* visibility: hidden; */
+            display: none;
+        }
+
+        #parass{
+            color: red;
+            /* visibility: hidden; */
+            display: none;
+        }
+
+
+
+        #paraInput{
+            color: red;
+            /* visibility: hidden; */
+            display: none;
+        }
+
+
+        
+        #form{
+            /* padding: 50px; */
+            
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: lightsalmon;
+
+        }
+    </style>
+</head>
+<body>
+    <form id="form" action="">
+        <label for="fname">First Name   </label>
+        <input id="inputFirst" type="text" placeholder="First Name">
+        <p id="para">Error</p>
+
+
+        <label for="Mname">Middle Name </label>
+        <input id="inputSecond" type="text" placeholder="Middle Name">
+        <p id="paras">Error</p>
+
+
+        <label for="fname">Last name</label>
+        <input id="inputThird" type="text" placeholder="Last Name">
+        <p id="parass">Error</p>
+
+
+         <label for="email">Email </label>
+        <input type="email" placeholder="Email">
+
+        <label for="password">Password </label>
+        <input   id="passwords" type="password" placeholder="Password">
+        <p id="paraInput">Error</p>
+
+
+
+        <label for="password">Confirm Password </label>
+        <input type="password" placeholder="Confirm Password">
+        <label for="DOB">DOB </label>
+        <input type="datetime-local" placeholder="DOB">
+        <label for="name">Github Profile Link </label>
+        <input type="text" placeholder="Github Profile Link">
+       <label for="name">Linkedin Profile Link </label>
+        <input type="text" placeholder="LinkedIn Profile Link">
+        <button id="button">Submit</button>
+    
+    </form>
+
+    
+</body>
+</html>
+
+
+<script>
+
+    let arr =[];
+
+    const first = document.getElementById("inputFirst")
+    console.log(first);
+
+    const second = document.getElementById("inputSecond")
+    // console.log(first);
+
+    const third = document.getElementById("inputThird")
+    // console.log(first);
+
+    const para = document.getElementById("para")
+    console.log(para);
+
+    const paras = document.getElementById("paras")
+    console.log(paras);
+
+    const parass = document.getElementById("parass")
+    console.log(parass);
+
+  
+    
+
+
+    first.addEventListener("input",find)
+    function find(){
+        console.log(first.value);
+        const userInput = first.value;  // nitin1
+        console.log("userinput",userInput);
+        console.log(typeof userInput);
+        arr = userInput.split("");
+        console.log(arr); // nitin1
+
+        for(let i =0; i<arr.length; i++){
+            if(isNaN(arr[i]%2)){
+                // alert("not valid")
+                para.style.display = "none"
+
+
+
+            }else{
+                // alert("not valid")
+                
+                para.style.display = "block"
+                
+
+            }
+        }
+    }
+
+
+
+
+
+    second.addEventListener("input",finds)
+    function finds(){
+        // console.log(first.value);
+        const userInput = second.value;  // nitin1
+        console.log("userinput",userInput);
+        console.log(typeof userInput);
+        arr = userInput.split("");
+        console.log(arr); // nitin1
+
+        for(let i =0; i<arr.length; i++){
+            if(isNaN(arr[i]%2)){
+                // alert("not valid")
+                paras.style.display = "none"
+
+                
+
+
+            }else{
+                // alert("not valid")
+                
+                paras.style.display = "block"
+                
+
+            }
+        }
+    }
+
+
+
+    third.addEventListener("input",findss)
+    function findss(){
+        console.log(first.value);
+        const userInput = third.value;  // nitin1
+        console.log("userinput",userInput);
+        console.log(typeof userInput);
+        arr = userInput.split("");
+        console.log(arr); // nitin1
+
+        for(let i =0; i<arr.length; i++){
+            if(isNaN(arr[i]%2)){
+                // alert("not valid")
+                parass.style.display = "none"
+
+
+            }else{
+                // alert("not valid")
+                
+                parass.style.display = "block"
+                
+
+            }
+        }
+    }
+    
+
+
+
+
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

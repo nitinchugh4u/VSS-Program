@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,11 +27,11 @@
 <body>
     <form id="form" action="">
         <label for="fname">First Name   </label>
-        <input id="inputFirst" type="text" placeholder="First Name">
+        <input class="inputFirst" type="text" placeholder="First Name">
         <label for="Mname">Middle Name </label>
-        <input type="text" placeholder="Middle Name">
+        <input class="inputFirst" type="text" placeholder="Middle Name">
         <label for="fname">Last name</label>
-        <input type="text" placeholder="Last Name">
+        <input class="inputFirst" type="text" placeholder="Last Name">
          <label for="email">Email </label>
         <input type="email" placeholder="Email">
         <label for="password">Password </label>
@@ -56,17 +56,22 @@
 <script>
 
     let arr =[];
-    const first = document.getElementById("inputFirst")
+    const first = document.getElementsByClassName("inputFirst")
     console.log(first);
 
-    first.addEventListener("input",find)
+   for(let i = 0; i<first.length; i++ ){
+    first[i].addEventListener("input",find)
+//    }
     function find(){
-        console.log(first.value);
-        const userInput = first.value;  // nitin1
-        console.log("userinput",userInput);
+        // console.log(first.value);
+        // for(let j = 0; j<first.length; j++ ){
+        const userInput = first[i].value;  // nitin1
+        // console.log("userinput",userInput);
         console.log(typeof userInput);
         arr = userInput.split("");
         console.log(arr); // nitin1
+        
+
 
         for(let i =0; i<arr.length; i++){
             if(isNaN(arr[i]%2)){
@@ -76,6 +81,7 @@
                 alert("not valid")
             }
         }
+    }
     }
 
 
@@ -138,16 +144,6 @@
 //       }
 //     }
 // //  console.log("hey",inputFirstName.innerText)
-
-
-
-
-
-
-// firstName.oninput = ()=>{ ...... }
-// middleName.oninput = ()=>{ ...... }
-// firstNameError.style.display = "block"
-// p{display:none)'
 
 
 
