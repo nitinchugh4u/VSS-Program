@@ -1,0 +1,98 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Counter: <span id="counterResult"></span></p>
+    <div>
+      <button id="btnIncrement">Increment</button>
+      <button id="btnDecrement">Decrement</button>
+    </div>
+
+    <p>So the number so far is : <span id="counterResult2"></span></p>
+  </body>
+</html>
+
+<script>
+  const btnDecrementElem = document.getElementById("btnDecrement");
+  const btnIncrementElem = document.getElementById("btnIncrement");
+  const counterResultElem = document.getElementById("counterResult");
+  const counterResult2Elem = document.getElementById("counterResult2");
+
+  let counterVal = 0;
+
+  // Increment button event listener
+  btnIncrementElem.addEventListener("click", () => {
+    counterVal++;
+    counterResultElem.innerText = counterVal;
+    counterResult2Elem.innerText = counterVal;
+  });
+
+  // Decrement button event listener
+  btnDecrementElem.addEventListener("click", () => {
+    counterVal--;
+    counterResultElem.innerText = counterVal;
+    counterResult2Elem.innerText = counterVal;
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+React.createElement(
+  "div",
+  { style: { backgroundColor: "tomato", width: "300px", padding: 12 } },
+  React.createElement("p", null, "Counter : ", counterVal),
+  React.createElement(
+    "div",
+    { style: { display: "flex", gap: 12 } },
+    React.createElement(
+      "button",
+      { onClick: () => setCounterVal((prevCount) => prevCount + 1) },
+      "Increment"
+    ),
+    React.createElement(
+      "button",
+      { onClick: () => setCounterVal((prevCount) => prevCount - 1) },
+      "Decrement"
+    )
+  ),
+  React.createElement("p", null, "So the number so far is : ", counterVal),
+  React.createElement("p", null, "So the number so far is 2 : ", counterVal),
+  React.createElement("p", null, "So the number so far is 3 : ", counterVal),
+  React.createElement("p", null, "So the number so far is 4 : ", counterVal),
+  React.createElement("p", null, "So the number so far is 5 : ", counterVal),
+  React.createElement("p", null, "So the number so far is 6 : ", counterVal),
+  React.createElement("p", null, "So the number so far is 7 : ", counterVal)
+);
+
+

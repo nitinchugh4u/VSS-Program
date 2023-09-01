@@ -19,7 +19,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            background-color: lightsalmon;
+            background-color: darkgray;
 
         }
 
@@ -172,6 +172,9 @@ const linkedinPattern = /linkedin\.com\/in\/[A-Za-z0-9_-]+\/?$/;
     let passwordCopy = "";
     let confirmPasswordCopy = "";
     let dateOfBirthCopy = "nothing";
+    let firstNameCopy = "nothing";
+    let secondNameCopy = "nothing";
+    let thirdNameCopy = "nothing";
 
 const FirstNameInputBox =  document.getElementById("FirstNameInputBox");
 console.log(FirstNameInputBox);
@@ -243,6 +246,8 @@ function findFirstNameInput(){
     // let arr = userTypeFirstInput.split("");
     // console.log("arr",arr);
 
+    firstNameCopy = FirstNameInputBox.value;
+
     for(let i =0; i<userTypeFirstInput.length; i++){
         const compare = userTypeFirstInput.charCodeAt(i);
         console.log(compare);
@@ -285,6 +290,9 @@ function findSecondNameInput(){
     // let arr = userTypeFirstInput.split("");
     // console.log("arr",arr);
 
+    secondNameCopy = SecondNameInputBox.value;
+
+
     for(let i =0; i<userTypeFirstInput.length; i++){
         const compare = userTypeFirstInput.charCodeAt(i);
         console.log(compare);
@@ -314,9 +322,13 @@ function findThirdNameInput(){
     // let arr = userTypeFirstInput.split("");
     // console.log("arr",arr);
 
+    thirdNameCopy = ThirdNameInputBox.value;
+
+
     for(let i =0; i<userTypeFirstInput.length; i++){
         const compare = userTypeFirstInput.charCodeAt(i);
         console.log(compare);
+
 
     if((compare>=65 && compare<=90)  ||  (compare>=97 && compare<=122 )){
         para2.style.display = "none"
@@ -352,6 +364,50 @@ button.addEventListener("click", function(event) {
 });
 
 function findButton() {
+
+
+
+
+    // firstName 
+
+    if(firstNameCopy == "nothing"){
+
+        para.style.display = "block"
+}else{
+    para.style.display = "none"
+
+
+}
+
+
+// secondName
+
+if(secondNameCopy == "nothing"){
+
+para1.style.display = "block"
+}else{
+para1.style.display = "none"
+
+}
+
+// ThirdName
+
+
+if(thirdNameCopy == "nothing"){
+
+para2.style.display = "block"
+}else{
+para2.style.display = "none"
+
+}
+
+
+
+
+
+
+    //password
+
     console.log("heyyyyyyy", passwordCopy);
     let specialCharacter = false;
     let number = false;
